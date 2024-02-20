@@ -8,75 +8,116 @@ import { CommonModule } from '@angular/common';
     CommonModule,
   ],
   template: `
-  <section>
+ 
+ <section class="text-center">
     <h1>Saisie</h1>
   </section>
   <section>
     <form>
-      <div>
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" required>
+      <div class="input-group input-group-sm col-sm-12 m-0 p-0 mb-3">
+        <input class="col-sm-12" placeholder="name" type="text" id="name" name="name" required>
+      </div>
+      <div class="input-group input-group-sm col-sm-12 m-0 p-0 mb-3">
+        <input class="col-sm-12" placeholder={{input}} type="text" id="input" name="input" readonly required>
+      </div>
+      <div class="input-group input-group-sm col-sm-12 m-0 p-0 mb-3">
+        <input class="col-sm-11" placeholder={{result}} type="text" id="input" name="input" readonly required>
+
+        <select class="col-sm-1" name="pets" id="pet-select">
+          <option value="parrot">u</option>
+          <option value="dog">m²</option>
+          <option value="cat">ml</option>
+          <option value="hamster">m³</option>
+          <option value="spider">l</option>
+        </select>
       </div>
     </form>
-    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
-      <div class="col-sm-12 form-control text-lg-right" type="text">{{input}}</div>
-    </div>
-    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
-      <div class="col-sm-10 form-control text-lg-right" type="text">{{result}}</div>
-      <select class ="col-sm-2" name="pets" id="pet-select">
-        <option value="parrot">u</option>
-        <option value="dog">m²</option>
-        <option value="cat">ml</option>
-        <option value="hamster">m³</option>
-        <option value="spider">l</option>
-      </select>
-    </div>
   </section>
   <section>
-    <div class="container-fluid">
-      <div class="jumbotron col-sm-4 p-2 m-0 bg-inverse">
-    
-        <div class="col-sm-12 p-1 m-0">
-          <button class="btn btn-warning col-sm-3" type="button">(</button>
-          <button class="btn btn-secondary col-sm-3" type="button">)</button>
-          <button class="btn btn-warning col-sm-3" type="button" (click)="clear()">AC</button>
-          <button class="btn btn-secondary col-sm-3" type="button" (click)="deleteLastInput()">supp</button>
-        </div>
-    
-        <div class="col-sm-12 p-1 m-0">
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="appendNumber('7')">7</button>
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">8</button>
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">9</button>
-          <button class="btn btn-lg btn-secondary col-sm-3 p-1" type="button" (click)="multiply()">x</button>
-        </div>
+    <div class="container-fluid p-0">
 
-        <div class="col-sm-12 p-1 m-0">
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">4</button>
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">5</button>
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">6</button>
-          <button class="btn btn-lg btn-secondary col-sm-3 p-1" type="button" (click)="subtract()">-</button>
+      <div class="row pb-2 m-0">
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-mauve" type="button">(</button>
         </div>
-
-        <div class="col-sm-12 p-1 m-0">
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">1</button>
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">2</button>
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">3</button>
-          <button class="btn btn-lg btn-secondary col-sm-3 p-1" type="button" (click)="add()">+</button>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-mauve" type="button">)</button>
         </div>
-
-        <div class="col-sm-12 p-1 m-0">
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">0</button>
-          <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button">,</button>
-          <button class="btn btn-lg btn-success col-sm-3 p-1" type="button" (click)="calculate()">=</button>
-          <input class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" value="Submit">
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-mauve" type="button" (click)="clear()">AC</button>
         </div>
-
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-mauve" type="button" (click)="deleteLastInput()">supp</button>
+        </div>
       </div>
+
+      <div class="row pb-2 m-0">
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('7')">7</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('8')">8</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('9')">9</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-bleu" type="button" (click)="multiply()">x</button>
+        </div>
+      </div>
+
+      <div class="row pb-2 m-0">
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('4')">4</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('5')">5</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('6')">6</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-bleu" type="button" (click)="subtract()">-</button>
+        </div>
+      </div>
+
+      <div class="row pb-2 m-0">
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('1')">1</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('2')">2</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('3')">3</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-bleu" type="button" (click)="add()">+</button>
+        </div>
+      </div>
+
+      <div class="row pb-2 m-0">
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button" (click)="appendNumber('0')">0</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12" type="button">,</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn col-sm-12 btn-bleu" type="button" (click)="calculate()">=</button>
+        </div>
+        <div class="col-sm-3">
+          <input class="btn btn-submit col-sm-12" type="button" value="Submit">
+        </div>
+      </div>
+
     </div>
   </section>
+
   `,
-  styleUrls: ['./saisie.component.css'],
+  styleUrls: ['./saisie.component.scss'],
 })
+
 export class SaisieComponent {
   input: string = ''; // Pour stocker les chiffres saisis
   result: string = ''; // Pour afficher le résultat final

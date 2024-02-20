@@ -10,12 +10,18 @@ import { InventaireComponent } from './inventaire/inventaire.component';
     InventaireComponent,
   ],
   template: `
-    <main>
-      <section class="content">
-        <app-saisie></app-saisie>
-        <app-inventaire></app-inventaire>
-      </section>
-    </main>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <app-saisie></app-saisie>
+        </div>
+        <div class="col-sm-12">
+          <app-inventaire></app-inventaire>
+        </div>
+      </div>
+    </div>
+  </main>
   `,
   styleUrls: ['./app.component.css'],
 })
