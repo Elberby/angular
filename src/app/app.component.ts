@@ -13,10 +13,10 @@ import { InventaireComponent } from './inventaire/inventaire.component';
   <main>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-12 col-sm-6">
           <app-saisie></app-saisie>
         </div>
-        <div class="col-sm-12">
+        <div class="col-12 col-sm-6">
           <app-inventaire></app-inventaire>
         </div>
       </div>
