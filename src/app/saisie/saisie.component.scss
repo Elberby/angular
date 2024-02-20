@@ -1,4 +1,5 @@
 .input-group {
+    padding: 0px 12px !important;
 
     input {
         background-color: #031626;
@@ -6,6 +7,12 @@
         border: 1px solid white;
         border-radius: 3px;
         padding: 8px 10px;
+    }
+
+    select {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border: 1px solid white;
     }
 }
 

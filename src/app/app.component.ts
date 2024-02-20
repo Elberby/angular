@@ -14,10 +14,11 @@ import { InventaireComponent } from './inventaire/inventaire.component';
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-6">
-          <app-saisie></app-saisie>
+          <app-saisie (dataSubmitted)="addToInventory($event)"></app-saisie>
         </div>
         <div class="col-12 col-sm-6">
-          <app-inventaire></app-inventaire>
+          <app-inventaire [inventoryData]="inventoryData"></app-inventaire>
+
         </div>
       </div>
     </div>
@@ -25,6 +26,15 @@ import { InventaireComponent } from './inventaire/inventaire.component';
   `,
   styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
   title = 'homes';
+
+  inventoryData: any[] = [];
+
+  constructor() {}
+
+  addToInventory(data: any) {
+    this.inventoryData.push(data);
+  }
 }
