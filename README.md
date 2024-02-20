@@ -1,27 +1,32 @@
-# Eval
+# TODO
+• Element html, quelle type de clavier et utiliser
+(Cela permet sur téléphone ou tablette de na pas avoir le clavier numérique par défaut)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+# Application de saisie diinventaire
+Objectif. Faciliter le travail de contrôle et de saisie des inventaires pour les employés de gestion.
+Fonctionnalités:
+• Saisie de données:
 
-## Development server
+• Saisir un titre et choisir une unité (m2, ml, ma, u, l).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+• Effectuer des calculs simples (multiplication, soustraction. addition, division).
 
-## Code scaffolding
+• Revenir sur une ligne pour l'éditer.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Interface:
 
-## Build
+• Adaptée aux mobiles et tablettes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+• Sauvegarde automatique.'
 
-## Running unit tests
+• Les données en cours d'édition sont toujours accessibles même si l'application est fermée.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Import/Export:
 
-## Running end-to-end tests
+• Importer des données depuis un fichier CSV,
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+• Exporter les données vers un fichier CSV.
 
-## Further help
+Impression:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+• Imprimer les données directement depuis l'application sous forme de tableau simple avec les colonnes désignation, quantité et unité.
