@@ -9,19 +9,8 @@ import { FormsModule } from '@angular/forms'; // Importez FormsModule
     CommonModule,
     FormsModule // Importez FormsModule ici
   ],
-  template: `
-   <section class="text-center">
-    <h1>Inventaire</h1>
-  </section>
-  <div *ngFor="let item of inventoryData">
-    <p>Name: {{ item.name }}</p>
-    <p>Input: {{ item.input }}</p>
-    <p>Result: {{ item.result }}</p>
-    <p>Unit: {{ item.unit }}</p>
-  </div>
-
-  `,
-  styleUrls: ['./inventaire.component.css'],
+  templateUrl: './inventaire.component.html',
+  styleUrls: ['./inventaire.component.scss'],
 })
 export class InventaireComponent {
   @Input() inventoryData: any[] = [];
