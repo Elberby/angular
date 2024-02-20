@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SaisieComponent } from './saisie/saisie.component';
+import { InventaireComponent } from './inventaire/inventaire.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [
+    SaisieComponent,
+    InventaireComponent,
+  ],
+  template: `
+    <main>
+      <section class="content">
+        <app-saisie></app-saisie>
+        <app-inventaire></app-inventaire>
+      </section>
+    </main>
+  `,
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'eval';
+  title = 'homes';
 }
